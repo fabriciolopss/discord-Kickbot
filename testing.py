@@ -30,8 +30,7 @@ async def roletarussa(ctx):
     else:
       anychannel = ctx.message.author.voice.channel.id
       if anychannel:
-        voice_channel = client.get_channel(anychannel)
-        # Join the voice channel
+        voice_channel = client.get_channel(anychannel) #Entrar no canal de voz
         member_to_kick: discord.Member = random.choice(voice_channel.members)
         voice_client: discord.VoiceClient = await voice_channel.connect()
         async with ctx.typing():
