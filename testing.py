@@ -11,9 +11,9 @@ status = ["Jogo da velha", "Kickando pessoas por aí", "Em desenvolvimento..."]
 intents = discord.Intents.all()
 
 #abrindo token em .env
-f = open(".env","r")
-token = f.read()
-f.close()
+with open(".env", "r") as f:
+  token = f.read()
+
 client = commands.Bot(command_prefix = "$", intents=intents)
 
 
